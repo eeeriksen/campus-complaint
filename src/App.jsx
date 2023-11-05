@@ -4,12 +4,15 @@ import { users } from './database/users.js'
 import { useState } from 'react'
 import Login from './routes/login'
 import Home from './routes/home'
+import SignIn from './routes/SignIn.jsx'
+import SignUp from './routes/SignUp.jsx'
 import { createBrowserRouter, Router, RouterProvider } from 'react-router-dom'
 
 function App() {
     const router = createBrowserRouter([
-        { path: '/', action: () => <Home /> },
-        { path: '/login', action: () => <Login /> },
+        { path: '/', element:<Home /> },
+        { path: '/signin', element:<SignIn /> },
+        { path: '/signup', element:<SignUp /> },
 
     ])
 
@@ -33,7 +36,6 @@ function App() {
     return (
         <>
             <RouterProvider router={router}>
-                <Router />
             </RouterProvider>
             {/* <Header />
             {
