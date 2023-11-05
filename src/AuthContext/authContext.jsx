@@ -1,5 +1,6 @@
 import { createContext, useState, useEffect } from "react";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { posts } from '../database/posts.js'
 
 export const Context = createContext();
 
@@ -29,6 +30,7 @@ export function AuthContext({ children }) {
     const values = {
         user: user,
         setUser: setUser,
+        posts: posts
     }
 
     return <Context.Provider value={values}>

@@ -7,6 +7,7 @@ import Protected from './routes/Protected.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { AuthContext } from './AuthContext/authContext.jsx'
 import { MakeComplaint } from './routes/MakeComplaint'
+import Complaint from './components/Complaint'
 
 function App() {
     const router = createBrowserRouter([
@@ -14,6 +15,7 @@ function App() {
         { path: '/signup', element: <SignUp /> },
         { path: '/', element: <Protected><Home /></Protected> },
         { path: '/make-complaint', element: <Protected><MakeComplaint /></Protected> },
+        { path: '/complaint/:id', element: <Protected><Complaint /></Protected> },
 
     ])
 

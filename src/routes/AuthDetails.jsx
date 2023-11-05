@@ -28,7 +28,7 @@ const AuthDetails = () => {
   };
 
   return (
-    <div>
+    <div className="auth-details">
       {authUser ? (
         <>
           <p>{`Signed In as ${authUser.email}`}</p>

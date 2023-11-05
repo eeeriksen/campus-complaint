@@ -1,0 +1,17 @@
+.make-complaint {
+    width: 960px;
+}
+
+.make-complaint form {
+    width: 100%;
+}
+
+.make-complaint form div {
+    width: 100%;
+    display: flex;
+}
+
+.make-complaint form div textarea {
+    width: 100%;
+    height: 200px;
+}

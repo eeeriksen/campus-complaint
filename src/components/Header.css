@@ -24,3 +24,13 @@ header {
 .second {
     font-weight: 800;
 }
+
+header .logo {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.auth-details {
+    display: flex;
+}
