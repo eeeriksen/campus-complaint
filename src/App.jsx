@@ -1,49 +1,28 @@
 import './App.css'
 import Header from './components/Header.jsx'
-import { users } from './database/users.js'
-import { useState } from 'react'
-import Login from './routes/login'
 import Home from './routes/home'
 import SignIn from './routes/SignIn.jsx'
 import SignUp from './routes/SignUp.jsx'
-import { createBrowserRouter, Router, RouterProvider } from 'react-router-dom'
+import Protected from './routes/Protected.jsx'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { AuthContext } from './AuthContext/authContext.jsx'
+import { MakeComplaint } from './routes/MakeComplaint'
 
 function App() {
     const router = createBrowserRouter([
-        { path: '/', element:<Home /> },
-        { path: '/signin', element:<SignIn /> },
-        { path: '/signup', element:<SignUp /> },
+        { path: '/signin', element: <SignIn /> },
+        { path: '/signup', element: <SignUp /> },
+        { path: '/', element: <Protected><Home /></Protected> },
+        { path: '/make-complaint', element: <Protected><MakeComplaint /></Protected> },
 
     ])
 
-    const [errorLogin, setErrorLogin] = useState(false)
-    const [userAuthenticated, setUserAuthenticated] = useState(false)
-
-    const handleLogin = (usernameRef, passwordRef) => {
-        const username = usernameRef.current.value
-        const password = passwordRef.current.value
-
-        const user = users.find(user => user.username === username && user.password === password)
-
-        if (true) {
-            setErrorLogin(false)
-            setUserAuthenticated(true)
-        } else {
-            setErrorLogin(true)
-        }
-    }
-
     return (
         <>
-            <RouterProvider router={router}>
-            </RouterProvider>
-            {/* <Header />
-            {
-                userAuthenticated
-                    ? <Home />
-                    : <Login login={handleLogin} errorLogin={errorLogin} />
-            } */}
-
+            <Header />
+            <AuthContext>
+                <RouterProvider router={router}></RouterProvider>
+            </AuthContext>
         </>
     )
 }
