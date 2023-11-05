@@ -1,12 +1,13 @@
 import './App.css'
-import Header from './components/Header/Header.jsx'
+import Header from './components/Header.jsx'
+import Login from './layouts/login'
 
 function App() {
 
   return (
     <>
       <Header />
-      <h1>Hi changes</h1>
+      <Login />
     </>
   )
 }
