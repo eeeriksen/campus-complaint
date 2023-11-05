@@ -1,15 +1,23 @@
+import { useRef } from 'react'
 import './login.css'
 
 function Login() {
+
+    const usernameRef = useRef()
+    const passwordRef = useRef()
+
+    const handleSubmit = () => {
+    }
+
     return (
         <div>
             <h2>TSU CAMPUSCOMPLAINT LOGIN</h2>
             <form>
                 <label>Username</label>
-                <input type="text" placeholder="Enter Username" />
+                <input ref={usernameRef} type="text" placeholder="Enter Username" />
                 <label>Password</label>
-                <input type="password" placeholder="Enter Password" />
-                <button type="submit">Login</button>
+                <input ref={passwordRef} type="password" placeholder="Enter Password" />
+                <button onClick={handleSubmit}>Login</button>
                 <p>Do not have an account? <a href="#">Register</a></p>
             </form>
         </div>
