@@ -1,17 +1,29 @@
 import './Home.css'
+import { posts } from '../database/posts.js'
+import { useState } from 'react'
+import Complaint from '../components/Complaint'
 
 function Home() {
+    const [latestPosts, setLatestPosts] = useState(posts)
+
     return (
-        <main>
-            <div>
+        <main className='home'>
+            <div className='header'>
                 <span>Latest complaints</span>
                 <button>Make a complaint</button>
             </div>
             <section>
-                <article>
-                    <h3>Complaint 1</h3>
-                    <p>Complaint 1 description</p>
-                </article>
+                {
+                    latestPosts.map(post => {
+                        return <Complaint
+                            key={post.postId}
+                            title={post.subject}
+                            content={post.content}
+                            username={post.username}
+                            created={post.created}
+                        />
+                    })
+                }
             </section>
         </main>
     )

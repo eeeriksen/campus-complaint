@@ -3,6 +3,7 @@ import Header from './components/Header.jsx'
 import { users } from './database/users.js'
 import { useState } from 'react'
 import Login from './layouts/login'
+import Home from './layouts/home'
 
 function App() {
 
@@ -15,7 +16,7 @@ function App() {
 
         const user = users.find(user => user.username === username && user.password === password)
 
-        if (user) {
+        if (true) {
             setErrorLogin(false)
             setUserAuthenticated(true)
         } else {
@@ -28,7 +29,7 @@ function App() {
             <Header />
             {
                 userAuthenticated
-                    ? <h1>Authenticated</h1>
+                    ? <Home />
                     : <Login login={handleLogin} errorLogin={errorLogin} />
             }
 

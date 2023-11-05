@@ -1,1 +1,10 @@
-main {}
+.home {
+    height: 100%;
+    width: 100%;
+}
+
+.home .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
