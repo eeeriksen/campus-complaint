@@ -1,10 +1,17 @@
 .home {
     height: 100%;
     width: 100%;
+    margin-top: 58px;
 }
 
-.home .header {
+.home .latest {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 26px;
+}
+
+.home .latest span {
+    font-size: 24px;
+    font-weight: 600;
 }

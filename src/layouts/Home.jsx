@@ -8,8 +8,8 @@ function Home() {
 
     return (
         <main className='home'>
-            <div className='header'>
-                <span>Latest complaints</span>
+            <div className='latest'>
+                <span>Complaints</span>
                 <button>Make a complaint</button>
             </div>
             <section>
@@ -18,9 +18,11 @@ function Home() {
                         return <Complaint
                             key={post.postId}
                             title={post.subject}
-                            content={post.content}
+                            subject={post.subject}
                             username={post.username}
                             created={post.created}
+                            comments={post.comments}
+                            upvotes={post.upvotes}
                         />
                     })
                 }

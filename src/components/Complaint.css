@@ -1,0 +1,60 @@
+.complaint {
+    border-bottom: 1px solid #474646;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    padding-top: 10px;
+    padding-left: 18px;
+}
+
+.complaint:last-child {
+    margin-bottom: 500px;
+}
+
+.left {
+    width: 70px;
+    display: flex;
+    flex-direction: column;
+}
+
+.up,
+.comment {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.up span {
+    margin-right: 4px;
+}
+
+.comment span {
+    margin-right: 8px;
+}
+
+.right .head {
+    display: flex;
+    justify-content: start;
+}
+
+.right .head {
+    font-size: 12px;
+}
+
+.right .head .username {
+    font-weight: 600;
+}
+
+.right p {
+    margin-top: 4px;
+    text-align: left;
+}
+
+.right .date {
+    margin-left: 12px;
+}
+
+.right .subject:hover {
+    color: #646cff;
+    cursor: pointer;
+}

@@ -5,7 +5,7 @@ export const posts = [
     subject: "Giant Pothole in the Student Parking Lot",
     content: "This pothole has been a nuisance for a whopping two weeks now. Everytime I drive through this parking lot I get back problems.",
     created: "Feb. 05, 2023",
-    upvotes: 99,
+    upvotes: ['eriksen', 'johndoe', 'janedoe', 'jimmydoe'],
     comments: [
       {
         commentId: 1,
@@ -27,7 +27,7 @@ export const posts = [
     subject: "Urinal in Building A is unflushable",
     content: "This urinal has been broken for the past three weeks and no one has done anything to fix it yet. In addition, it is the only urinal in that restroom.",
     created: "Jan. 01, 2024",
-    upvotes: 2342,
+    upvotes: ['eriksen', 'johndoe', 'janedoe'],
     comments: [
       {
         commentId: 3,
@@ -49,7 +49,7 @@ export const posts = [
     subject: "The temperature in the Computer Science department is out of control!",
     content: "On one side of the building it's freezing cold, and on the other side it's burning up! The teachers are sick of it too because all of their offices are ice cold, but no one is fixing it.",
     created: "Jan. 08, 2024",
-    upvotes: 187,
+    upvotes: ['eriksen', 'jimmydoe'],
     comments: [
       {
         commentId: 5,
@@ -77,7 +77,7 @@ export const posts = [
     subject: "The records department is so busy that it's impossible to meet with someone",
     content: "I've been in the records office every day this week for hours at a time and I'm no closer to getting my transfer credits fixed. I understand that they're busy, but something has to change, I'm worried I won't have my classes scheduled in time.",
     created: "Jan. 13, 2024",
-    upvotes: 711,
+    upvotes: ['johndoe', 'janedoe', 'jimmydoe'],
     comments: [
       {
         commentId: 8,
@@ -99,7 +99,7 @@ export const posts = [
     subject: "Food options in the cafeteria",
     content: "Due to my religious and personal beliefs, I would really like more options in the cafeteria that do not have pork or beef.",
     created: "Jan. 15, 2024",
-    upvotes: 89,
+    upvotes: ['eriksen', 'johndoe', 'janedoe', 'jimmydoe'],
     comments: [
       {
         commentId: 10,
@@ -121,7 +121,7 @@ export const posts = [
     subject: "Colin is a really mean professor",
     content: "Colin is a seriously mean guy, I don't get why he hates me.",
     created: "Jan. 21, 2024",
-    upvotes: 1,
+    upvotes: ['jimmydoe'],
     comments: [
       {
         commentId: 12,
@@ -149,7 +149,7 @@ export const posts = [
     subject: "Help with FAFSA",
     content: "Hey everyone, this is probably a dumb question, but how do I find my FSA ID? The website keeps asking for it, but I don't remember making one.",
     created: "Jan. 22, 2024",
-    upvotes: 4772,
+    upvotes: ['eriksen', 'johndoe'],
     comments: [
       {
         commentId: 15,
@@ -183,7 +183,7 @@ export const posts = [
     subject: "More campus security by the rear parkking lot at night",
     content: "I have a late class two days of the week and there are no lights near the parking lot. I wish I could park in the front lot where the security people stay later. Is it possible to just have one of them come back here while the other stays in the front?",
     created: "Jan. 25, 2024",
-    upvotes: 339,
+    upvotes: ['eriksen', 'johndoe', 'janedoe', 'jimmydoe'],
     comments: [
       {
         commentId: 19,
